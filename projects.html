@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-toggle" id="navToggle" aria-label="Open navigation" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-tabs" id="navTabs">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navTabs = document.getElementById('navTabs');
+    navToggle.addEventListener('click', () => {
+      navTabs.classList.toggle('open');
+      if (window.innerWidth <= 700) {
+        document.body.classList.toggle('menu-open', navTabs.classList.contains('open'));
+      }
+    });
+    navToggle.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        navTabs.classList.toggle('open');
+      }
+    });
+    navTabs.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 700) navTabs.classList.remove('open');
+      });
+    });
+  </script>
+
+<article class="project" role="article" aria-labelledby="project-title-ddpg-docking" data-project-id="ddpg-docking" itemscope itemtype="https://schema.org/CreativeWork">
+    <header class="project-header">
+      <h2 id="project-title-ddpg-docking" class="project-title" itemprop="name">Reinforcement Learning for Autonomous Trailer Docking</h2>
+      <p class="project-meta">
+        <time class="project-date" datetime="2023-01-01" itemprop="datePublished">2025</time>
+        <span class="project-role" itemprop="author">• Researcher & Developer</span>
+        <span class="project-tags">• <span itemprop="keywords">Reinforcement Learning, Robotics, ROS2, Simulation</span></span>
+      </p>
+      <p class="project-summary" itemprop="description">
+        A deep reinforcement learning framework for precise and autonomous trailer docking using a simulation-to-real pipeline.
+      </p>
+    </header>
+
+    <figure class="project-media">
+      <!-- As requested, the image source is kept the same. -->
+      <img src="assets/pictures/video.gif" alt="CAD Render of the VTOL drone" itemprop="image" />
+      <figcaption>Real world Autonomous Docking</figcaption>
+    </figure>
+
+    <section class="project-details">
+      <h3 class="sr-only">Project details</h3>
+
+      <div class="project-overview">
+        <h4>Overview</h4>
+        <p>
+          Developed a comprehensive framework for autonomous trailer docking using deep reinforcement learning. This project, part of my Master's thesis, integrates advanced deep learning models, realistic simulation, and a pipeline for real-world deployment. The core of the system is a Deep Deterministic Policy Gradient (DDPG) agent trained to perform precise and stable maneuvering, guided by a multi-objective reward function that balances accuracy, efficiency, and safety.
+        </p>
+      </div>
+
+      <div class="project-features">
+        <h4>Key features / highlights</h4>
+        <ul>
+          <li>Implemented a Deep Deterministic Policy Gradient (DDPG) agent for stable control.</li>
+          <li>Designed a multi-objective reward function for balanced, real-world performance.</li>
+          <li>Built an end-to-end simulation-to-real transfer pipeline.</li>
+          <li>Validated in the real world using a motion capture system and ROS2 framework.</li>
+        </ul>
+      </div>
+
+      <div class="project-tech">
+        <h4>Tech & tools</h4>
+        <ul class="tech-list" aria-label="Technologies used">
+          <li>PyTorch</li>
+          <li>ROS2</li>
+          <li>OpenAI Gym</li>
+          <li>Gazebo</li>
+          <li>MuJoCo</li>
+          <li>Reinforcement Learning</li>
+        </ul>
+      </div>
+
+      <div class="project-role">
+        <h4>My role</h4>
+        <p>
+            As the primary researcher for my Master's thesis, I was responsible for the entire project lifecycle. This included conceptualizing the control framework, implementing the DDPG agent and reward system, building the Sim2Real pipeline, and conducting validation experiments in both simulation and the real world.
+        </p>
+      </div>
+      <div class="project-links" aria-label="Project links">
+        <!--<a class="btn btn-primary" href="index.html">Live demo (local)</a>-->
+        <a class="btn" href="https://github.com/pain7576/ddpg-trucktrailer" target="_blank" rel="noopener noreferrer">Source Code(GitHub)</a>
+      </div>
+<!--
+      <div class="project-links" aria-label="Project links">
+        <a class="btn btn-primary" href="index.html">Live demo (local)</a>
+        <a class="btn" href="https://github.com/aallonas/portfolio" target="_blank" rel="noopener noreferrer">Source (GitHub)</a>
+        <a class="btn" href="assets/resumes/resume-en.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
+      </div>-->
+    </section>
+    <footer class="project-footer" aria-hidden="false">
+      <p class="project-stats">Duration: 6 months • Team: 1 (Solo Project) • Status: completed</p>
+    </footer>
+  </article>
+
+  <article class="project" role="article" aria-labelledby="project-title-radarnet" data-project-id="radarnet" itemscope itemtype="https://schema.org/CreativeWork">
+    <header class="project-header">
+      <h2 id="project-title-radarnet" class="project-title" itemprop="name">Hybrid Point-Grid RadarNet</h2>
+      <p class="project-meta">
+        <time class="project-date" datetime="2024-01-01" itemprop="datePublished">Academic Project, 2024</time>
+        <span class="project-role" itemprop="author">• Deep Learning Developer</span>
+        <span class="project-tags">• <span itemprop="keywords">Deep Learning, Autonomous Vehicles, Radar, Computer Vision</span></span>
+      </p>
+      <p class="project-summary" itemprop="description">
+        A novel hybrid neural network architecture for enhanced radar object detection in autonomous vehicles using the OpenPCDet framework.
+      </p>
+    </header>
+
+    <figure class="project-media">
+      <!-- As requested, the image source is kept the same. -->
+      <img src="assets/pictures/overview.png" alt="CAD Render of the VTOL drone" itemprop="image" />
+      <figcaption>Visualization of Radar Point Cloud Data for Detection</figcaption>
+    </figure>
+
+    <section class="project-details">
+      <h3 class="sr-only">Project details</h3>
+
+      <div class="project-overview">
+        <h4>Overview</h4>
+        <p>
+          Implemented a novel hybrid architecture that combines the strengths of both point-based and grid-based neural networks to improve object detection from radar data. By integrating point-wise feature extraction before grid rendering, the model achieves significantly better object orientation estimation. The architecture was replicated from a state-of-the-art research paper and validated on the VoD autonomous driving dataset, outperforming baseline methods.
+        </p>
+      </div>
+
+      <div class="project-features">
+        <h4>Key features / highlights</h4>
+        <ul>
+          <li>Achieved up to 19.7% higher mean Average Precision (mAP) for vehicle detection.</li>
+          <li>Improved object orientation estimation through early point-wise feature extraction.</li>
+          <li>Utilized advanced point cloud processing techniques like GNNs and Kernel Point Convolutions (KPConv).</li>
+          <li>Successfully replicated and validated a research paper's architecture.</li>
+        </ul>
+      </div>
+
+      <div class="project-tech">
+        <h4>Tech & tools</h4>
+        <ul class="tech-list" aria-label="Technologies used">
+          <li>OpenPCDet Framework</li>
+          <li>PyTorch</li>
+          <li>Graph Neural Networks (GNN)</li>
+          <li>Python</li>
+          <li>VoD Dataset</li>
+          <li>Point Cloud Processing</li>
+        </ul>
+      </div>
+
+      <div class="project-role">
+        <h4>My role</h4>
+        <p>
+            I led the implementation of the hybrid architecture within the OpenPCDet framework. My responsibilities included adapting the codebase to integrate point-based and grid-based modules, training the model on the large-scale VoD dataset, and performing a rigorous validation to compare its performance against established baseline methods.
+        </p>
+      </div>
+
+      <div class="project-links" aria-label="Project links">
+        <!--<a class="btn btn-primary" href="index.html">Live demo (local)</a>-->
+        <a class="btn" href="https://github.com/pain7576/Hybrid-GNN-Feature-Extraction-Model/tree/main" target="_blank" rel="noopener noreferrer">Source Code(GitHub)</a>
+      </div>
+    </section>
+    <footer class="project-footer" aria-hidden="false">
+      <p class="project-stats">Duration: 1 Semester • Team: 2  • Status: Completed</p>
+    </footer>
+  </article>
+
+<article class="project" role="article" aria-labelledby="project-title-path-planner" data-project-id="path-planner" itemscope itemtype="https://schema.org/CreativeWork">
+    <header class="project-header">
+      <h2 id="project-title-path-planner" class="project-title" itemprop="name">Development of Local and Global Path Planners for TurtleBot</h2>
+      <p class="project-meta">
+        <time class="project-date" datetime="2022-01-01" itemprop="datePublished">Passion Project</time>
+        <span class="project-role" itemprop="author">• Robotics Developer</span>
+        <span class="project-tags">• <span itemprop="keywords">Path Planning, Robotics, ROS, Algorithms</span></span>
+      </p>
+      <p class="project-summary" itemprop="description">
+        A complete navigation stack for a TurtleBot mobile robot, featuring custom global and local path planners for robust autonomous navigation.
+      </p>
+    </header>
+
+    <figure class="project-media">
+      <!-- As requested, the image source is kept the same. -->
+      <img src="assets/pictures/nav.png" alt="CAD Render of the VTOL drone" itemprop="image" />
+      <figcaption>TurtleBot Navigating a Simulated Environment with Path Planning</figcaption>
+    </figure>
+
+    <section class="project-details">
+      <h3 class="sr-only">Project details</h3>
+
+      <div class="project-overview">
+        <h4>Overview</h4>
+        <p>
+          This project involved the development and implementation of a full path planning system for a TurtleBot in a static environment. A global path planner was designed to compute the optimal route from a start to a goal position, ensuring it avoids known obstacles and minimizes travel distance. In parallel, a local path planner was created to operate in real-time, allowing the robot to adjust its path dynamically to navigate around unexpected obstacles and changes in the environment.
+        </p>
+      </div>
+
+      <div class="project-features">
+        <h4>Key features / highlights</h4>
+        <ul>
+          <li>Developed a global path planner for optimal, long-range navigation.</li>
+          <li>Created a real-time local planner for dynamic obstacle avoidance.</li>
+          <li>Ensured seamless integration between the global and local planners.</li>
+          <li>Successfully demonstrated the system's effectiveness on a physical TurtleBot platform.</li>
+        </ul>
+      </div>
+
+      <div class="project-tech">
+        <h4>Tech & tools</h4>
+        <ul class="tech-list" aria-label="Technologies used">
+          <li>ROS (Robot Operating System)</li>
+          <li>Gazebo</li>
+          <li>Python / C++</li>
+          <li>Path Planning Algorithms</li>
+          <li>TurtleBot</li>
+          <li>SLAM/Mapping</li>
+        </ul>
+      </div>
+
+      <div class="project-role">
+        <h4>My role</h4>
+        <p>
+          I was responsible for designing and implementing both the global and local path planning algorithms from scratch. This included algorithm selection, software development within the ROS framework, and integration of the planners into a cohesive navigation stack. I also led the testing and validation phase, deploying the code on a real TurtleBot to demonstrate its effectiveness in a live environment.
+        </p>
+      </div>
+<!--
+      <div class="project-links" aria-label="Project links">
+        <a class="btn btn-primary" href="index.html">Live demo (local)</a>
+        <a class="btn" href="https://github.com/aallonas/portfolio" target="_blank" rel="noopener noreferrer">Source (GitHub)</a>
+      </div>-->
+    </section>
+    <footer class="project-footer" aria-hidden="false">
+      <p class="project-stats">Duration: 6 months • Team: 1 (Solo Project) • Status: Completed</p>
+    </footer>
+  </article>
+  
+  <footer class="site-footer">
+    <p>Harsh Ramniklal Kasundra &mdash; Automation & robotics Engineering Student @ TU dortmund</p>
+    <p>
+      <a href="index.html" class="footer-link">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span class="footer-link-text">Home</span>
+      </a> |
+      <a href="https://github.com/pain7576" target="_blank" class="footer-link">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+        <span class="footer-link-text">GitHub</span>
+      </a> |
+      <a href="https://www.linkedin.com/in/harsh-kasundra7/" target="_blank" class="footer-link">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/></svg>
+        <span class="footer-link-text">LinkedIn</span>
+      </a> |
+      <a href="contact.html" class="footer-link">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M21 6.5a2.5 2.5 0 0 0-2.5-2.5h-13A2.5 2.5 0 0 0 3 6.5v11A2.5 2.5 0 0 0 5.5 20h13a2.5 2.5 0 0 0 2.5-2.5v-11zm-2.5-.5a.5.5 0 0 1 .5.5v.379l-8 5.333-8-5.333V6a.5.5 0 0 1 .5-.5h15zm.5 12a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V8.121l7.5 5 7.5-5V18z"/></svg>
+        <span class="footer-link-text">Contact</span>
+      </a>
+    </p>
+  </footer>
+</body>
+</html>
